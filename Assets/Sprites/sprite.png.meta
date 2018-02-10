@@ -1,12 +1,19 @@
 fileFormatVersion: 2
 guid: c461aa3735aa5d74f951e9b878dcf738
+<<<<<<< HEAD
+timeCreated: 1518240618
+=======
 timeCreated: 1518240384
+>>>>>>> 0ccdfb36ac4735ad57cfb8263824903f9e7cc745
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
     21300000: sprite_0
     21300002: sprite_1
+<<<<<<< HEAD
+=======
   externalObjects: {}
+>>>>>>> 0ccdfb36ac4735ad57cfb8263824903f9e7cc745
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -77,7 +84,18 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+<<<<<<< HEAD
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+=======
     androidETC2FallbackOverride: 0
+>>>>>>> 0ccdfb36ac4735ad57cfb8263824903f9e7cc745
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -93,7 +111,10 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+<<<<<<< HEAD
+=======
       physicsShape: []
+>>>>>>> 0ccdfb36ac4735ad57cfb8263824903f9e7cc745
       tessellationDetail: 0
     - serializedVersion: 2
       name: sprite_1
@@ -107,7 +128,10 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+<<<<<<< HEAD
+=======
       physicsShape: []
+>>>>>>> 0ccdfb36ac4735ad57cfb8263824903f9e7cc745
       tessellationDetail: 0
     outline: []
     physicsShape:
