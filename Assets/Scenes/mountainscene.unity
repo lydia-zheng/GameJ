@@ -282,6 +282,7 @@ GameObject:
   - component: {fileID: 1563472646}
   - component: {fileID: 1563472645}
   - component: {fileID: 1563472644}
+  - component: {fileID: 1563472649}
   m_Layer: 0
   m_Name: Stick_man
   m_TagString: Untagged
@@ -300,9 +301,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb687c568339de54381dd3b4963a7085, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerSpeed: 5
+  playerSpeed: 10
   facingRight: 1
-  jumpPower: 1500
+  jumpPower: 1300
   moveX: 0
 --- !u!50 &1563472645
 Rigidbody2D:
@@ -368,7 +369,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: cf334e003910bd3439d35efb0d73346d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -386,3 +387,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1563472649
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1563472643}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f1554a885d125374a9e929aaa130edb5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1

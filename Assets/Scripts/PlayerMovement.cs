@@ -6,7 +6,7 @@ public class PlayerMovement : MonoBehaviour {
 
 	public int playerSpeed = 10;
 	public bool facingRight = true;
-	public int jumpPower = 10;
+	public int jumpPower = 1300;
 	public float moveX;
 
 	// Use this for initialization
@@ -24,6 +24,12 @@ public class PlayerMovement : MonoBehaviour {
 
 		if (Input.GetButtonDown("Jump")){
 			Jump();
+		}
+
+		if (moveX != 0) {
+			gameObject.GetComponent<Animator> ().SetBool ("isRunning", true);
+		} else {
+			gameObject.GetComponent<Animator> ().SetBool ("isRunning", false);
 		}
 
 		if (moveX < 0.0f && facingRight == true){
