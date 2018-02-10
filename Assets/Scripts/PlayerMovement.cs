@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour {
-	
+	// YANS FARTY ADDITION
 	public int playerSpeed = 5;
 	public bool facingRight = true;
 	public int jumpPower = 5;
