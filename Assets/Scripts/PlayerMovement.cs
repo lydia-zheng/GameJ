@@ -3,18 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour {
-	// YANS FARTY ADDITION
-	public int playerSpeed = 5;
+
+	public int playerSpeed = 10;
 	public bool facingRight = true;
-	public int jumpPower = 5;
+	public int jumpPower = 10;
 	public float moveX;
-	private bool inAir = false;
 
 	// Use this for initialization
-//	void Start () {
+	//	void Start () {
 
-//	}
-	
+	//	}
+
 	// Update is called once per frame
 	void Update () {
 		PlayerMove ();
@@ -23,7 +22,7 @@ public class PlayerMovement : MonoBehaviour {
 	void PlayerMove(){
 		moveX = Input.GetAxis("Horizontal");
 
-		if (Input.GetButtonDown("Jump") && !inAir){
+		if (Input.GetButtonDown("Jump")){
 			Jump();
 		}
 
@@ -44,4 +43,3 @@ public class PlayerMovement : MonoBehaviour {
 		transform.localScale = new Vector2 (transform.localScale.x * -1, transform.localScale.y);
 	}
 }
-//COMMENTED 
