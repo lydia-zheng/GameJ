@@ -91,7 +91,16 @@ public class DialogueManager : MonoBehaviour {
                                 shard.GetComponent<Shard>().DestroyShard();
                             }
             }
-           
+            else if (currNPC == "Crayon")
+            {
+                GameObject shard = GameObject.Find("Crayon");
+                if (shard != null)
+                {
+                    shard.GetComponent<Shard>().DestroyShard();
+                }
+            }
+
+
         }
 
 	}

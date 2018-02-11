@@ -2935,6 +2935,10 @@ Prefab:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1484666823}
+    - target: {fileID: 1299416397079816, guid: 0d2d108b9969fa14da00c852f9485b13, type: 2}
+      propertyPath: m_Name
+      value: ShardText-tem
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0d2d108b9969fa14da00c852f9485b13, type: 2}
   m_IsPrefabParent: 0
