@@ -9,7 +9,7 @@ public class CameraFollow : MonoBehaviour {
     public BoxCollider2D boundBox;
     private Vector3 minBounds;
     private Vector3 maxBounds;
-    public GameObject boundCenter;
+   
 
     private Camera theCamera;
     private float halfHeight;
