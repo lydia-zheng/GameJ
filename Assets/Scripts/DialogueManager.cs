@@ -133,7 +133,7 @@ public class DialogueManager : MonoBehaviour
         }
         else if (currNPC == "Sister")
         {
-            dName.text = "Me";
+            dName.text = "Sister";
             numberLines = 3;
             if (currentLine == 0)
             {
@@ -147,6 +147,35 @@ public class DialogueManager : MonoBehaviour
             {
                 dText.text = "But I'll be seeing you soon. Lets talk lots then.";
             }
+        }
+        else if (currNPC == "Detective")
+        {
+            dName.text = "Detective";
+            numberLines = 2;
+            if (currentLine == 0)
+            {
+                dText.text = "Sorry Kiddo,";
+            }
+            else if (currentLine == 1)
+            {
+                dText.text = "there's nothing I can do to prove your innocence.";
+            }
+
+            else if (currNPC == "Scarf")
+            {
+                dName.text = "Scarf";
+                numberLines = 2;
+                if (currentLine == 0)
+                {
+                    dText.text = "My sister used to tell me to wear a scarf before going out.";
+                }
+                else if(currentLine == 1)
+                {
+                    dText.text = "I never did.";
+                }
+               
+            }
+
         }
 
 
@@ -188,7 +217,7 @@ public class DialogueManager : MonoBehaviour
                 }
             }
 
-            /* else if (currNPC == "Scarf")
+            else if (currNPC == "Scarf")
              {
                  GameObject shard = GameObject.Find("Scarf");
                  if (shard != null)
@@ -196,7 +225,7 @@ public class DialogueManager : MonoBehaviour
                      shard.GetComponent<Shard>().DestroyShard();
                  }
              }
-            */
+            
 
         }
 
