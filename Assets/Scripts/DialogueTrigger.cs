@@ -21,15 +21,37 @@ public class DialogueTrigger : MonoBehaviour {
 
 	void OnTriggerStay2D(Collider2D thing){
 		if (thing.gameObject.name == "MC" && Input.GetKeyUp (KeyCode.Space)) {
-			//	DialogM.displayBox (name,dialogue);
 
-			if (gameObject.name == "RedWoman" ) {
-				DialogM.displayBox ("Queen");
+			if (gameObject.name == "Mother") {
+				DialogM.displayBox ();
+				DialogM.currNPC = "Mother";
 			}
-			if (gameObject.name == "JokerTalk") {
-				DialogM.displayBox ("Joker");
+			if (gameObject.name == "Bag") {
+				DialogM.displayBox ();
+				DialogM.currNPC = "Bag";
+			}
+			if (gameObject.name == "Police") {
+				DialogM.displayBox ();
+				DialogM.currNPC = "Police";
+			}
+			if (gameObject.name == "Crayon") {
+				DialogM.displayBox ();
+				DialogM.currNPC = "Crayon";
+			}
+			if (gameObject.name == "Detective") {
+				DialogM.displayBox ();
+				DialogM.currNPC = "Detective";
+			}
+			if (gameObject.name == "Sister") {
+				DialogM.displayBox ();
+				DialogM.currNPC = "Sister";
+			}
+			if (gameObject.name == "Doge") {
+				DialogM.displayBox ();
+				DialogM.currNPC = "Doge";
 			}
 
+		
 		}
 	}
 }

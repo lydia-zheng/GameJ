@@ -9,6 +9,9 @@ public class DialogueManager : MonoBehaviour {
 	public Text dText;
 	public Text dName;
 	public bool dialogActive;
+	public int numberLines;
+	public int currentLine = 0;
+	public string currNPC;
 
 	GameObject textObject;
 
@@ -19,27 +22,71 @@ public class DialogueManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (dialogActive && Input.GetKeyDown (KeyCode.Space)) {
-		dBox.SetActive (false);
-		dialogActive = false;
+
+		if (currNPC == "Mother"){
+			dName.text = "Mother";
+			numberLines = 2;
+			if (currentLine == 0) {
+				dText.text = "My child...";
+			} else if (currentLine == 1) {
+				dText.text = "I lost everything in one day.";	
+			}
+		}else if (currNPC == "Bag"){
+			dName.text = "Old Bag";
+			numberLines = 2;
+			if (currentLine == 0) {
+				dText.text = "<i>Mom's favorite bag.</i>";
+			} else if (currentLine == 1) {
+				dText.text = "<i>The day she lost it, she was distraught.</i>";	
+			}
+		}else if (currNPC == "Police"){
+			dName.text = "Police";
+			numberLines = 3;
+			if (currentLine == 0) {
+				dText.text = "Hey you!";
+			} else if (currentLine == 1) {
+				dText.text = "Why are you still wandering around at this time of night?";	
+			}else if (currentLine == 2) {
+				dText.text = "You better not be up to anything...";	
+			}
+		}else if (currNPC == "Doge"){
+			dName.text = "Developers";
+			numberLines = 2;
+			if (currentLine == 0) {
+				dText.text = "much unity";
+			} else if (currentLine == 1) {
+				dText.text = "very suffer";	
+			}
+		}else if (currNPC == "Crayon"){
+			dName.text = "Red Crayon";
+			numberLines = 3;
+			if (currentLine == 0) {
+				dText.text = "<i>A fond childhood memory.</i>";
+			} else if (currentLine == 1) {
+				dText.text = "<i>I used to fight over the red crayon with my sister.</i>";	
+			}else if (currentLine == 2) {
+				dText.text = "<i>We both loved red.</i>";	
+			}
 		}
 
+		if (dialogActive && Input.GetKeyDown (KeyCode.Space)) {
+			//dBox.SetActive (false);
+			//dialogActive = false;
+			currentLine++;
+		}
+
+		if (currentLine >= numberLines) {
+			dBox.SetActive (false);
+			dialogActive = false;
+			currentLine = 0;
+		}
 
 	}
 
 	//public void displayBox(string name, string dialogue){
-	public void displayBox(string name){
-		dBox.SetActive(true);
+	public void displayBox(){
 		dialogActive = true;
-
-		if (name == "Joker"){
-			dName.text = "Joker";
-			dText.text = "My life is a joke.";
-		}else if (name == "Queen"){
-			dName.text = "Queen";
-			dText.text = "I wish Joker took some antidepressants.";
-		}
-
+		dBox.SetActive (true);
 	}
 
 	

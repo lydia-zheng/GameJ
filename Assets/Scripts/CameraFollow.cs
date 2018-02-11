@@ -16,19 +16,18 @@ public class CameraFollow : MonoBehaviour {
     private float halfWidth;
     private static bool cameraExists;
 
-   
     void Awake () {
-        DontDestroyOnLoad(transform.gameObject);
+        /*DontDestroyOnLoad(transform.gameObject);
 
         if (!cameraExists)
         {
             cameraExists = true;
-            DontDestroyOnLoad(transform.gameObject);
+            DontDestroyOnLoad(gameObject);
         }
         else
         {
             Destroy(gameObject);
-        }
+        }*/
 
       
         minBounds = boundBox.bounds.min;
