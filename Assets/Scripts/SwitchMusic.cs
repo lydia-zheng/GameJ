@@ -7,6 +7,7 @@ public class SwitchMusic : MonoBehaviour {
 	public AudioClip newTrack;
 	private AudioManager audioM;
 
+
 	// Use this for initialization
 	void Start () {
 		audioM = FindObjectOfType<AudioManager> ();
@@ -18,12 +19,15 @@ public class SwitchMusic : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D trigger){
-		if (trigger.gameObject.name == "MC") {
+		if (trigger.gameObject.name == "MC" || gameObject.name == "MusicTrigger") {
 			if (newTrack != null) {
 				audioM.ChangeBGM (newTrack);
 			}
 				
-		}
-
+		}else if(trigger.gameObject.name == "MC" || gameObject.name == "MusicOff"){
+			audioM.BGM.Stop ();
+			}
 	}
+
 }
+
