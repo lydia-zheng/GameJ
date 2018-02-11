@@ -87,6 +87,16 @@ public class DialogueManager : MonoBehaviour {
 				} else if (currentLine == 2) {
 					dText.text = "<i>...not that I care anymore.</i>";	
 				}
+		else if (currNPC == "Sister") {
+			dName.text = "Me";
+			numberLines = 3;
+			if (currentLine == 0) {
+				dText.text = "<i>Tomorrow is the end.</i>";
+			} else if (currentLine == 1) {
+				dText.text = "<i>Tonight is my last night of sleep.</i>";	
+			} else if (currentLine == 2) {
+				dText.text = "<i>...not that I care anymore.</i>";	
+			}
 		}
 
 
