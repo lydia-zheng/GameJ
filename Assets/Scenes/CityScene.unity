@@ -378,7 +378,7 @@ PolygonCollider2D:
       - {x: -1.0982494, y: -0.53852177}
       - {x: -0.89487964, y: -0.76367664}
       - {x: 1.3673308, y: -0.7410064}
-      - {x: 2.6568105, y: -1.670908}
+      - {x: 2.126379, y: -1.0487375}
       - {x: 1.9225123, y: -0.67977905}
 --- !u!1001 &279376836
 Prefab:
@@ -442,6 +442,11 @@ Prefab:
     - target: {fileID: 1904283834095652, guid: 4dc2f26db4a23074e9b840e36858a02a, type: 2}
       propertyPath: m_Name
       value: GameMaster
+      objectReference: {fileID: 0}
+    - target: {fileID: 114390226345958188, guid: 4dc2f26db4a23074e9b840e36858a02a,
+        type: 2}
+      propertyPath: shards
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4dc2f26db4a23074e9b840e36858a02a, type: 2}
@@ -658,7 +663,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 1.1, y: 0}
+  m_Offset: {x: 1.1, y: 0.41135302}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -669,7 +674,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1, y: 0.28013045}
   m_EdgeRadius: 0
 --- !u!1 &545333605
 GameObject:
@@ -3137,8 +3142,8 @@ PolygonCollider2D:
   m_Points:
     m_Paths:
     - - {x: 0.9330522, y: 1.8344727}
-      - {x: 0.042551447, y: -1.2322348}
-      - {x: -0.20713788, y: -2.671248}
+      - {x: 0.11869127, y: -1.3864917}
+      - {x: -0.23976892, y: -3.2882771}
       - {x: -0.24734697, y: -3.9680972}
       - {x: -0.14620182, y: -3.0740185}
       - {x: 0.524742, y: -0.33217463}

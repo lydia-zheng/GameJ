@@ -99,6 +99,7 @@ public class DialogueManager : MonoBehaviour {
                     shard.GetComponent<Shard>().DestroyShard();
                 }
             }
+           
 
 
         }
