@@ -12,6 +12,7 @@ public class DialogueManager : MonoBehaviour {
 	public int numberLines;
 	public int currentLine = 0;
 	public string currNPC;
+   
 
 	GameObject textObject;
 
@@ -37,9 +38,11 @@ public class DialogueManager : MonoBehaviour {
 			if (currentLine == 0) {
 				dText.text = "<i>Mom's favorite bag.</i>";
 			} else if (currentLine == 1) {
-				dText.text = "<i>The day she lost it, she was distraught.</i>";	
+				dText.text = "<i>The day she lost it, she was distraught.</i>";
+               
 			}
-		}else if (currNPC == "Police"){
+        }
+        else if (currNPC == "Police"){
 			dName.text = "Police";
 			numberLines = 3;
 			if (currentLine == 0) {
@@ -79,7 +82,17 @@ public class DialogueManager : MonoBehaviour {
 			dBox.SetActive (false);
 			dialogActive = false;
 			currentLine = 0;
-		}
+
+            if(currNPC == "Bag")
+            {
+                 GameObject shard = GameObject.Find("Bag");
+                            if (shard != null)
+                            {
+                                shard.GetComponent<Shard>().DestroyShard();
+                            }
+            }
+           
+        }
 
 	}
 

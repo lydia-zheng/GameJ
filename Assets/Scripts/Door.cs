@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class Door : MonoBehaviour {
 
-    public string levelName = "LevelToLoad";
+    public string levelName = "CityScene";
     private gameMaster gm;
 
     bool isLoadingScene = false;

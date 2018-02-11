@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Shard : MonoBehaviour {
     private gameMaster gm;
+    public DialogueManager dm;
 
     // Update is called once per frame
      void Start()
@@ -15,13 +16,20 @@ public class Shard : MonoBehaviour {
         
     }
 
-    void OnTriggerEnter2D(Collider2D col)
+   /* void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.GetComponent<PlayerMovement>())
-        {
+
+    } */
+
+    public void DestroyShard()
+    {
+  
             gm.shards += 1;
             Destroy(gameObject);
-            Update();
-        }    
+    Update();
     }
-}
+   
+
+
+}    
+
