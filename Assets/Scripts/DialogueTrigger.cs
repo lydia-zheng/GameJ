@@ -57,6 +57,10 @@ public class DialogueTrigger : MonoBehaviour {
 				DialogM.displayBox ();
 				DialogM.currNPC = "Detective";
 			}
+			if (gameObject.name == "Letter") {
+				DialogM.displayBox ();
+				DialogM.currNPC = "Letter";
+			}
 			if (gameObject.name == "Sister") {
 				DialogM.displayBox ();
 				DialogM.currNPC = "Sister";

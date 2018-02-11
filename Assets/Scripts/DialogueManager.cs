@@ -69,6 +69,14 @@ public class DialogueManager : MonoBehaviour {
 			} else if (currentLine == 2) {
 				dText.text = "<i>We both loved red.</i>";	
 			} 
+		}else if (currNPC == "Letter") {
+			dName.text = "Love Letter";
+			numberLines = 2;
+			if (currentLine == 0) {
+				dText.text = "<i>My sister's admirer sent these everyday.</i>";
+			} else if (currentLine == 1) {
+				dText.text = "<i>These stopped coming a week before she died.</i>";	
+			} 
 		}else if (currNPC == "FirstSceneDialogue") {
 				dName.text = "Me";
 				numberLines = 3;
