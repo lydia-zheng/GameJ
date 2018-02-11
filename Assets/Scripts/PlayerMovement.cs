@@ -22,7 +22,7 @@ public class PlayerMovement : MonoBehaviour {
 	void PlayerMove(){
 		moveX = Input.GetAxis("Horizontal");
 
-		if (Input.GetButtonDown("Jump")){
+		if (Input.GetKeyDown(KeyCode.UpArrow)){
 			Jump();
 		}
 
