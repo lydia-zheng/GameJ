@@ -23,7 +23,7 @@ public class DialogueTrigger : MonoBehaviour {
 		if (thing.gameObject.name == "MC" && Input.GetKeyUp (KeyCode.Space)) {
 			//	DialogM.displayBox (name,dialogue);
 
-			if (gameObject.name == "QueenTalk" ) {
+			if (gameObject.name == "RedWoman" ) {
 				DialogM.displayBox ("Queen");
 			}
 			if (gameObject.name == "JokerTalk") {
