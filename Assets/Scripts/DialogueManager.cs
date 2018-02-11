@@ -69,7 +69,7 @@ public class DialogueManager : MonoBehaviour {
 			} else if (currentLine == 2) {
 				dText.text = "<i>We both loved red.</i>";	
 			} 
-		}else if (currNPC == "Letter") {
+		} else if (currNPC == "Letter") {
 			dName.text = "Love Letter";
 			numberLines = 2;
 			if (currentLine == 0) {
@@ -77,17 +77,7 @@ public class DialogueManager : MonoBehaviour {
 			} else if (currentLine == 1) {
 				dText.text = "<i>These stopped coming a week before she died.</i>";	
 			} 
-		}else if (currNPC == "FirstSceneDialogue") {
-				dName.text = "Me";
-				numberLines = 3;
-				if (currentLine == 0) {
-					dText.text = "<i>Tomorrow is the end.</i>";
-				} else if (currentLine == 1) {
-					dText.text = "<i>Tonight is my last night of sleep.</i>";	
-				} else if (currentLine == 2) {
-					dText.text = "<i>...not that I care anymore.</i>";	
-				}
-		else if (currNPC == "Sister") {
+		} else if (currNPC == "FirstSceneDialogue") {
 			dName.text = "Me";
 			numberLines = 3;
 			if (currentLine == 0) {
@@ -96,6 +86,16 @@ public class DialogueManager : MonoBehaviour {
 				dText.text = "<i>Tonight is my last night of sleep.</i>";	
 			} else if (currentLine == 2) {
 				dText.text = "<i>...not that I care anymore.</i>";	
+			} else if (currNPC == "Sister") {
+				dName.text = "Me";
+				numberLines = 3;
+				if (currentLine == 0) {
+					dText.text = "I see you've come to visit me.";
+				} else if (currentLine == 1) {
+					dText.text = "I am so sorry for what happened...";	
+				} else if (currentLine == 2) {
+					dText.text = "But I'll be seeing you soon. Lets talk lots then.";	
+				}
 			}
 		}
 
