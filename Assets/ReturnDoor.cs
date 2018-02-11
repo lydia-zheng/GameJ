@@ -17,18 +17,18 @@ public class ReturnDoor : MonoBehaviour {
         gm = FindObjectOfType<gameMaster>();
     }
 
-    void OnTriggerEnter2D(Collider2D coll)
+    void OnTriggerStay2D(Collider2D coll)
     {
-
         if (coll.GetComponent<PlayerMovement>())
         {
 
-            
-            if(isLoadingScene != true)
+            if (!isLoadingScene)
             {
-            isLoadingScene = true;
-            SceneManager.LoadScene("CitySceneExit");
+                isLoadingScene = true;
+                SceneManager.LoadScene(levelName);
             }
+               
+
             
         }
     }
