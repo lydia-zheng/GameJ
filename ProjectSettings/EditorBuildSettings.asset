@@ -4,4 +4,25 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/BridgeScene.unity
+    guid: 321b5b8e1e06ea04a966079e626bc2cd
+  - enabled: 1
+    path: Assets/Scenes/ForestScene.unity
+    guid: b3edf81bd6733b54c96c8ba339424b4b
+  - enabled: 1
+    path: Assets/Scenes/CitySceneExit.unity
+    guid: 2193762a49037d341bd25f90e2fb90be
+  - enabled: 1
+    path: Assets/Scenes/CityScene.unity
+    guid: 1d856b06e57ca6a44838c6d6944d690f
+  - enabled: 1
+    path: Assets/Scenes/DarkScene.unity
+    guid: 31a9b0cf80df5e34bb0af9ed2ac60001
+  - enabled: 1
+    path: Assets/Scenes/GameMenu.unity
+    guid: e39bf290a898c3447a061819c534ca5c
+  - enabled: 1
+    path: Assets/Scenes/AlleyWay.unity
+    guid: cc1a4000f87cf134abb1be9447678cc5

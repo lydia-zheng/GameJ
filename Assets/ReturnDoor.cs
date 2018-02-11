@@ -17,8 +17,12 @@ public class ReturnDoor : MonoBehaviour {
         gm = FindObjectOfType<gameMaster>();
     }
 
+
+
     void OnTriggerStay2D(Collider2D coll)
+       
     {
+     
         if (coll.GetComponent<PlayerMovement>())
         {
 
