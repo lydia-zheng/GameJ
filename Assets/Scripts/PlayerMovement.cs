@@ -48,4 +48,6 @@ public class PlayerMovement : MonoBehaviour {
 		facingRight = !facingRight;
 		transform.localScale = new Vector2 (transform.localScale.x * -1, transform.localScale.y);
 	}
+
+  
 }
