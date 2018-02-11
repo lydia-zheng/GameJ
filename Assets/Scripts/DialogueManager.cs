@@ -24,7 +24,7 @@ public class DialogueManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		if (currNPC == "Mother"){
+		if (currNPC == "Mother") {
 			dName.text = "Mother";
 			numberLines = 2;
 			if (currentLine == 0) {
@@ -32,7 +32,7 @@ public class DialogueManager : MonoBehaviour {
 			} else if (currentLine == 1) {
 				dText.text = "I lost everything in one day.";	
 			}
-		}else if (currNPC == "Bag"){
+		} else if (currNPC == "Bag") {
 			dName.text = "Old Bag";
 			numberLines = 2;
 			if (currentLine == 0) {
@@ -41,18 +41,17 @@ public class DialogueManager : MonoBehaviour {
 				dText.text = "<i>The day she lost it, she was distraught.</i>";
                
 			}
-        }
-        else if (currNPC == "Police"){
+		} else if (currNPC == "Police") {
 			dName.text = "Police";
 			numberLines = 3;
 			if (currentLine == 0) {
 				dText.text = "Hey you!";
 			} else if (currentLine == 1) {
 				dText.text = "Why are you still wandering around at this time of night?";	
-			}else if (currentLine == 2) {
+			} else if (currentLine == 2) {
 				dText.text = "You better not be up to anything...";	
 			}
-		}else if (currNPC == "Doge"){
+		} else if (currNPC == "Doge") {
 			dName.text = "Developers";
 			numberLines = 2;
 			if (currentLine == 0) {
@@ -60,17 +59,29 @@ public class DialogueManager : MonoBehaviour {
 			} else if (currentLine == 1) {
 				dText.text = "very suffer";	
 			}
-		}else if (currNPC == "Crayon"){
+		} else if (currNPC == "Crayon") {
 			dName.text = "Red Crayon";
 			numberLines = 3;
 			if (currentLine == 0) {
 				dText.text = "<i>A fond childhood memory.</i>";
 			} else if (currentLine == 1) {
 				dText.text = "<i>I used to fight over the red crayon with my sister.</i>";	
-			}else if (currentLine == 2) {
+			} else if (currentLine == 2) {
 				dText.text = "<i>We both loved red.</i>";	
-			}
+			} 
+		}else if (currNPC == "FirstSceneDialogue") {
+				dName.text = "Me";
+				numberLines = 3;
+				if (currentLine == 0) {
+					dText.text = "<i>Tomorrow is the end.</i>";
+				} else if (currentLine == 1) {
+					dText.text = "<i>Tonight is my last night of sleep.</i>";	
+				} else if (currentLine == 2) {
+					dText.text = "<i>...not that I care anymore.</i>";	
+				}
 		}
+
+
 
 		if (dialogActive && Input.GetKeyDown (KeyCode.Space)) {
 			//dBox.SetActive (false);

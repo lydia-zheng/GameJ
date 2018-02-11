@@ -19,16 +19,30 @@ public class DialogueTrigger : MonoBehaviour {
 		
 	}
 
+	void OnTriggerEnter2D(Collider2D thing){
+		if (thing.gameObject.name == "MC") {
+			if (gameObject.name == "FirstSceneDialogue") {
+				DialogM.displayBox ();
+				DialogM.currNPC = "FirstSceneDialogue";
+
+			}
+		}
+	}
+
 	void OnTriggerStay2D(Collider2D thing){
+
+	
 		if (thing.gameObject.name == "MC" && Input.GetKeyUp (KeyCode.Space)) {
 
 			if (gameObject.name == "Mother") {
 				DialogM.displayBox ();
 				DialogM.currNPC = "Mother";
+
 			}
 			if (gameObject.name == "Bag") {
 				DialogM.displayBox ();
 				DialogM.currNPC = "Bag";
+
 			}
 			if (gameObject.name == "Police") {
 				DialogM.displayBox ();
@@ -37,6 +51,7 @@ public class DialogueTrigger : MonoBehaviour {
 			if (gameObject.name == "Crayon") {
 				DialogM.displayBox ();
 				DialogM.currNPC = "Crayon";
+
 			}
 			if (gameObject.name == "Detective") {
 				DialogM.displayBox ();
@@ -50,7 +65,6 @@ public class DialogueTrigger : MonoBehaviour {
 				DialogM.displayBox ();
 				DialogM.currNPC = "Doge";
 			}
-
 		
 		}
 	}
