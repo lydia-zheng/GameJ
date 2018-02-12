@@ -69,7 +69,12 @@ public class DialogueTrigger : MonoBehaviour {
 				DialogM.displayBox ();
 				DialogM.currNPC = "Doge";
 			}
-		
-		}
+            if (gameObject.name == "Scarf")
+            {
+                DialogM.displayBox();
+                DialogM.currNPC = "Scarf";
+            }
+
+        }
 	}
 }

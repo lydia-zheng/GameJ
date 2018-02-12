@@ -160,23 +160,24 @@ public class DialogueManager : MonoBehaviour
             {
                 dText.text = "there's nothing I can do to prove your innocence.";
             }
+        }
 
-            else if (currNPC == "Scarf")
+        else if (currNPC == "Scarf")
+        {
+            dName.text = "Scarf";
+            numberLines = 2;
+            if (currentLine == 0)
             {
-                dName.text = "Scarf";
-                numberLines = 2;
-                if (currentLine == 0)
-                {
-                    dText.text = "My sister used to tell me to wear a scarf before going out.";
-                }
-                else if(currentLine == 1)
-                {
-                    dText.text = "I never did.";
-                }
-               
+                dText.text = "My sister used to tell me to wear a scarf before going out.";
+            }
+            else if (currentLine == 1)
+            {
+                dText.text = "I never did.";
             }
 
         }
+
+        
 
 
         if (dialogActive && Input.GetKeyDown(KeyCode.Space))
