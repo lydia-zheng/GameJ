@@ -34,7 +34,16 @@ public class DialogueTrigger : MonoBehaviour {
 
 			}
 		}
-	}
+        if (thing.gameObject.name == "MC")
+        {
+            if (gameObject.name == "LastSceneDialogue")
+            {
+                DialogM.displayBox();
+                DialogM.currNPC = "LastSceneDialogue";
+
+            }
+        }
+    }
 
 	void OnTriggerStay2D(Collider2D thing){
 

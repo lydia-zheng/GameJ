@@ -10,7 +10,7 @@ public class gameMaster : MonoBehaviour {
 
     void Update()
     {
-        ShardText.text = ("");
+      //  ShardText.text = ("");
     }
 
 }

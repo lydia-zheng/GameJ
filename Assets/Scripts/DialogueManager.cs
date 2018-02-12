@@ -195,6 +195,40 @@ public class DialogueManager : MonoBehaviour
 			}
 		}
 
+        else if (currNPC == "LastSceneDialogue")
+        {
+            dName.text = "";
+            numberLines = 5;
+            if(currentLine == 0)
+            {
+                dName.text = "Police";
+                dText.text = "Ahem!";
+            }
+            if (currentLine == 1)
+            {
+                dName.text = "Police";
+                dText.text = " Come on, prisoner. It's time.";
+            }
+            if (currentLine == 2)
+            {
+                dName.text = "Me";
+                dText.text = "......";
+            }
+
+            if (currentLine == 3)
+            {
+                dName.text = "Me";
+                dText.text = "Give me a moment.";
+            }
+            if(currentLine == 4)
+            {
+                dName.text = "Me";
+                dText.text = "(I'll see you soon, sis.)";
+            }
+            //fade out would be great here
+
+        }
+
         
 
 
