@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
 
 public class DialogueManager : MonoBehaviour
 {
-
+ 
     public GameObject dBox;
     public Text dText;
     public Text dName;
@@ -13,6 +15,8 @@ public class DialogueManager : MonoBehaviour
     public int numberLines;
     public int currentLine = 0;
     public string currNPC;
+    // public bool finished = false; //not working
+    
 
 
     GameObject textObject;
@@ -197,7 +201,7 @@ public class DialogueManager : MonoBehaviour
 
         else if (currNPC == "LastSceneDialogue")
         {
-            dName.text = "";
+            
             numberLines = 5;
             if(currentLine == 0)
             {
@@ -226,9 +230,11 @@ public class DialogueManager : MonoBehaviour
                 dText.text = "(I'll see you soon, sis.)";
             }
             //fade out would be great here
+  
+
 
         }
-
+       
         
 
 
@@ -278,6 +284,13 @@ public class DialogueManager : MonoBehaviour
                      shard.GetComponent<Shard>().DestroyShard();
                  }
              }
+            else if(currNPC == "LastSceneDialogue")
+            {
+                gameMaster gm = FindObjectOfType<gameMaster>();
+
+
+                gm.GetComponent<FadeFunction>().Fading();
+            }
             
 
         }
@@ -291,5 +304,22 @@ public class DialogueManager : MonoBehaviour
         dBox.SetActive(true);
     }
 
+    /* IEnumerator ChangeToEnd()
+     {
+         print("got to change to End");
+         if(currNPC == "LastSceneDialogue" && finished ==true)
+         {
+         gameMaster gm = FindObjectOfType<gameMaster>();
+         float fadeTime = gm.GetComponent<fading>().BeginFade(1);
+             print("fading isn't working");
+             yield return new WaitForSeconds(fadeTime);
+          finished = false;
+         SceneManager.LoadScene(0);
+         }
 
+
+     }
+     */
+
+   
 }
