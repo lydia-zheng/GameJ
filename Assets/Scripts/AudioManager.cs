@@ -23,4 +23,12 @@ public class AudioManager : MonoBehaviour {
 		BGM.clip = music;
 		BGM.Play ();
 	}
+
+	/*IEnumerator FadeAudio(){
+		while(BGM.volume > 0){
+			BGM.volume = Mathf.Lerp (BGM.volume, 0, .1f);
+		}
+	}*/
+
+	//StartCoroutine(FadeAudio());
 }

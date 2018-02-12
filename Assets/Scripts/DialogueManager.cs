@@ -128,7 +128,7 @@ public class DialogueManager : MonoBehaviour
             }
             else if (currentLine == 2)
             {
-                dText.text = "But I'll be seeing you soon. Lets talk lots then.";
+                dText.text = "But I'll be seeing you soon. Let's talk lots then.";
             }
         }
         else if (currNPC == "Detective")
