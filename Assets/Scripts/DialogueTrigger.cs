@@ -27,6 +27,13 @@ public class DialogueTrigger : MonoBehaviour {
 
 			}
 		}
+		if (thing.gameObject.name == "MC") {
+			if (gameObject.name == "DarkSceneDialogue") {
+				DialogM.displayBox ();
+				DialogM.currNPC = "DarkSceneDialogue";
+
+			}
+		}
 	}
 
 	void OnTriggerStay2D(Collider2D thing){

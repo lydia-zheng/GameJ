@@ -114,23 +114,6 @@ public class DialogueManager : MonoBehaviour
                 dText.text = "<i>These stopped coming a week before she died.</i>";
             }
         }
-        else if (currNPC == "FirstSceneDialogue")
-        {
-            dName.text = "Me";
-            numberLines = 3;
-            if (currentLine == 0)
-            {
-                dText.text = "<i>Tomorrow is the end.</i>";
-            }
-            else if (currentLine == 1)
-            {
-                dText.text = "<i>Tonight is my last night of sleep.</i>";
-            }
-            else if (currentLine == 2)
-            {
-                dText.text = "<i>...not that I care anymore.</i>";
-            }
-        }
         else if (currNPC == "Sister")
         {
             dName.text = "Sister";
@@ -176,6 +159,41 @@ public class DialogueManager : MonoBehaviour
             }
 
         }
+
+		else if (currNPC == "FirstSceneDialogue")
+		{
+			dName.text = "Me";
+			numberLines = 3;
+			if (currentLine == 0)
+			{
+				dText.text = "<i>Tomorrow is the end.</i>";
+			}
+			else if (currentLine == 1)
+			{
+				dText.text = "<i>Tonight is my last night of sleep.</i>";
+			}
+			else if (currentLine == 2)
+			{
+				dText.text = "<i>...not that I care anymore.</i>";
+			}
+		}
+		else if (currNPC == "DarkSceneDialogue")
+		{
+			dName.text = "Me";
+			numberLines = 3;
+			if (currentLine == 0)
+			{
+				dText.text = "<i>...sister?</i>";
+			}
+			else if (currentLine == 1)
+			{
+				dText.text = "<i>Who is that inside the house with her...</i>";
+			}
+			else if (currentLine == 2)
+			{
+				dText.text = "<i>Wait... </i>";
+			}
+		}
 
         
 
