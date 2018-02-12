@@ -61,6 +61,7 @@ public class DialogueTrigger : MonoBehaviour {
 
 			}
 			if (gameObject.name == "Detective") {
+                print("hello");
 				DialogM.displayBox ();
 				DialogM.currNPC = "Detective";
 			}
