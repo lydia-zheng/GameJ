@@ -156,11 +156,11 @@ public class DialogueManager : MonoBehaviour
             numberLines = 2;
             if (currentLine == 0)
             {
-                dText.text = "My sister used to tell me to wear a scarf before going out.";
+                dText.text = "<i>My sister used to tell me to wear a scarf before going out.</i>";
             }
             else if (currentLine == 1)
             {
-                dText.text = "I never did.";
+                dText.text = "<i>I never did.</i>";
             }
 
         }
@@ -168,16 +168,12 @@ public class DialogueManager : MonoBehaviour
 		else if (currNPC == "FirstSceneDialogue")
 		{
 			dName.text = "Me";
-			numberLines = 3;
+			numberLines = 2;
 			if (currentLine == 0)
-			{
-				dText.text = "<i>Tomorrow is the end.</i>";
-			}
-			else if (currentLine == 1)
 			{
 				dText.text = "<i>Tonight is my last night of sleep.</i>";
 			}
-			else if (currentLine == 2)
+			else if (currentLine == 1)
 			{
 				dText.text = "<i>...not that I care anymore.</i>";
 			}
