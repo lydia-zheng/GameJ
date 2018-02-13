@@ -26,15 +26,10 @@ public class Door : MonoBehaviour {
     }
     void OnTriggerStay2D(Collider2D coll)
     {
-        if (coll.GetComponent<PlayerMovement>())
-        {
-            if (Input.GetKeyDown(KeyCode.E) && !isLoadingScene)
-            {
-                isLoadingScene = true;
-                SceneManager.LoadScene(levelName);
-               
-            }
-        }
+		if (coll.gameObject.name == "MC" && Input.GetKeyDown(KeyCode.E)) {
+				SceneManager.LoadScene (levelName);
+		}
+			
     }
     void OnTriggerExit2D(Collider2D coll)
     {
