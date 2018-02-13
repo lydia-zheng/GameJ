@@ -38,11 +38,11 @@ public class DialogueManager : MonoBehaviour
             numberLines = 2;
             if (currentLine == 0)
             {
-                dText.text = "My child...";
+                dText.text = "I've lost everything.";
             }
             else if (currentLine == 1)
             {
-                dText.text = "I lost everything in one day.";
+                dText.text = "In just one day.";
             }
         }
         else if (currNPC == "Bag")
