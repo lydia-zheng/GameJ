@@ -8,22 +8,36 @@ public class PlayerMovement : MonoBehaviour {
 	public bool facingRight = true;
 	public int jumpPower = 1300;
 	public float moveX;
+	public bool canJump = true;
 
-	// Use this for initialization
-	//	void Start () {
+	void Start () {
 
-	//	}
+	}
 
 	// Update is called once per frame
 	void Update () {
 		PlayerMove ();
 	}
 
+	void OnCollisionEnter2D(Collision2D ground){
+		if (ground.gameObject.tag == "Ground"){
+			
+			canJump = true;
+		}
+	}
+	void OnCollisionExit2D(Collision2D ground){
+		if (ground.gameObject.tag == "Ground"){
+			canJump = false;
+		}
+	}
+
 	void PlayerMove(){
+		//ground check
+
 		moveX = Input.GetAxis("Horizontal");
 
-		if (Input.GetKeyDown(KeyCode.UpArrow)){
-			Jump();
+		if (Input.GetKeyDown(KeyCode.UpArrow) && canJump){
+				Jump ();
 		}
 
 		if (moveX != 0) {

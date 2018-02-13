@@ -23,10 +23,8 @@ public class SwitchMusic : MonoBehaviour {
 			if (newTrack != null) {
 				audioM.ChangeBGM (newTrack);
 			}
+		}
 				
-		}else if(trigger.gameObject.name == "MC" || gameObject.name == "MusicOff"){
-			audioM.BGM.Stop ();
-			}
 	}
 
 }

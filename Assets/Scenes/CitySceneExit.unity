@@ -308,7 +308,7 @@ GameObject:
   - component: {fileID: 134379024}
   m_Layer: 0
   m_Name: Stair2
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -519,7 +519,7 @@ GameObject:
   - component: {fileID: 519891554}
   m_Layer: 0
   m_Name: Stairs
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2471,6 +2471,7 @@ MonoBehaviour:
   facingRight: 1
   jumpPower: 2500
   moveX: 0
+  canJump: 1
 --- !u!95 &1431918559
 Animator:
   serializedVersion: 3
@@ -2686,6 +2687,10 @@ Prefab:
       propertyPath: m_LocalPosition.x
       value: -0.66
       objectReference: {fileID: 0}
+    - target: {fileID: 1290938898030606, guid: f052b932612775a42973a1101c5c0548, type: 2}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f052b932612775a42973a1101c5c0548, type: 2}
   m_IsPrefabParent: 0
@@ -2873,7 +2878,7 @@ GameObject:
   - component: {fileID: 1851560567}
   m_Layer: 0
   m_Name: stair1
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

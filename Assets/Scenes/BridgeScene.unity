@@ -149,6 +149,7 @@ GameObject:
   - component: {fileID: 336537746}
   - component: {fileID: 336537748}
   - component: {fileID: 336537749}
+  - component: {fileID: 336537750}
   m_Layer: 0
   m_Name: Scarf
   m_TagString: Untagged
@@ -229,6 +230,18 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
+--- !u!114 &336537750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 336537745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eafdbb7d71da9fc4d9fc075264d33f33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dm: {fileID: 0}
 --- !u!1 &535122908
 GameObject:
   m_ObjectHideFlags: 0
@@ -397,6 +410,7 @@ MonoBehaviour:
   facingRight: 1
   jumpPower: 2500
   moveX: 0
+  canJump: 1
 --- !u!95 &666056504
 Animator:
   serializedVersion: 3
@@ -835,6 +849,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1273395459 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1238876502750852, guid: f052b932612775a42973a1101c5c0548,
+    type: 2}
+  m_PrefabInternal: {fileID: 2046573001}
+--- !u!61 &1273395460
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1273395459}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 9.233975, y: 7.8576837}
+  serializedVersion: 2
+  m_Size: {x: 39.563656, y: 3.1310723}
 --- !u!61 &1314457128 stripped
 BoxCollider2D:
   m_PrefabParentObject: {fileID: 61756816841409300, guid: f8317772add971f45ba6341d18d4261f,
@@ -1167,6 +1200,10 @@ Prefab:
         type: 2}
       propertyPath: m_Offset.x
       value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1290938898030606, guid: f052b932612775a42973a1101c5c0548, type: 2}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 61805435294489554, guid: f052b932612775a42973a1101c5c0548, type: 2}
