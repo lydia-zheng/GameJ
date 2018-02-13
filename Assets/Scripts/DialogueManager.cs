@@ -15,8 +15,9 @@ public class DialogueManager : MonoBehaviour
     public int numberLines;
     public int currentLine = 0;
     public string currNPC;
-    // public bool finished = false; //not working
-    
+   
+    public bool updated = false;
+
 
 
     GameObject textObject;
@@ -202,7 +203,7 @@ public class DialogueManager : MonoBehaviour
         else if (currNPC == "LastSceneDialogue")
         {
             
-            numberLines = 5;
+            numberLines = 6;
             if(currentLine == 0)
             {
                 dName.text = "Police";
@@ -228,6 +229,21 @@ public class DialogueManager : MonoBehaviour
             {
                 dName.text = "Me";
                 dText.text = "(I'll see you soon, sis.)";
+            }
+            if(currentLine == 5)
+            {
+                Destroy(dBox);
+                Image image = FindObjectOfType<Image>();
+                if (!updated)
+                {
+                    updated = true;
+                    image.GetComponent<FadeFunction>();
+                    
+                }
+               
+
+
+           
             }
             //fade out would be great here
   
@@ -284,13 +300,7 @@ public class DialogueManager : MonoBehaviour
                      shard.GetComponent<Shard>().DestroyShard();
                  }
              }
-            else if(currNPC == "LastSceneDialogue")
-            {
-                gameMaster gm = FindObjectOfType<gameMaster>();
-
-
-                gm.GetComponent<FadeFunction>().Fading();
-            }
+           
             
 
         }
@@ -304,22 +314,6 @@ public class DialogueManager : MonoBehaviour
         dBox.SetActive(true);
     }
 
-    /* IEnumerator ChangeToEnd()
-     {
-         print("got to change to End");
-         if(currNPC == "LastSceneDialogue" && finished ==true)
-         {
-         gameMaster gm = FindObjectOfType<gameMaster>();
-         float fadeTime = gm.GetComponent<fading>().BeginFade(1);
-             print("fading isn't working");
-             yield return new WaitForSeconds(fadeTime);
-          finished = false;
-         SceneManager.LoadScene(0);
-         }
-
-
-     }
-     */
-
+   
    
 }
