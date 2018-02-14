@@ -8,34 +8,38 @@ public class Door : MonoBehaviour {
 
     public string levelName = "CityScene";
     private gameMaster gm;
-
-    bool isLoadingScene = false;
+    public bool usingDoor = false;
 
     void Start()
     {
         gm = FindObjectOfType<gameMaster>();   
     }
 
+	void Update () {
+		checkDoor ();
+	}
+
+	void checkDoor(){
+		if (usingDoor && Input.GetKeyDown(KeyCode.E)) {
+			SceneManager.LoadScene (levelName);
+		}
+	}
+
+
     void OnTriggerEnter2D(Collider2D coll)
     {
+		if (coll.gameObject.name == "MC") {
+			gm.InputText.text = ("Press [E] To Enter");
+			usingDoor = true;
+		} 
 
-        if (coll.GetComponent<PlayerMovement>())
-        {
-            gm.InputText.text = ("Press [E] To Enter");
-        }
     }
-    void OnTriggerStay2D(Collider2D coll)
-    {
-		if (coll.gameObject.name == "MC" && Input.GetKeyDown(KeyCode.E)) {
-				SceneManager.LoadScene (levelName);
-		}
-			
-    }
+
     void OnTriggerExit2D(Collider2D coll)
     {
-        if (coll)
-        {
+		if (coll.gameObject.name == "MC") {
             gm.InputText.text = ("");
+			usingDoor = false;
 
         }
        
