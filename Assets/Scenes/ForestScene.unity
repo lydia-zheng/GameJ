@@ -169,6 +169,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelName: CityScene
+  usingDoor: 0
 --- !u!60 &133357068
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -1802,6 +1803,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d84c74039e5fdb428d6e222185bb475, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canTalk: 0
 --- !u!1 &258691699
 GameObject:
   m_ObjectHideFlags: 0
@@ -2556,6 +2558,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d84c74039e5fdb428d6e222185bb475, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canTalk: 0
 --- !u!114 &1217396450
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2786,6 +2789,14 @@ Prefab:
         type: 2}
       propertyPath: m_FontData.m_FontSize
       value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 1501032578363852, guid: 0d2d108b9969fa14da00c852f9485b13, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1860691727197964, guid: 0d2d108b9969fa14da00c852f9485b13, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0d2d108b9969fa14da00c852f9485b13, type: 2}

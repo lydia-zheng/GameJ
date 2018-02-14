@@ -7,6 +7,7 @@ public class DialogueTrigger : MonoBehaviour {
 //	public string name;
 //	public string dialogue;
 	private DialogueManager DialogM;
+	public bool canTalk;
 
 
 	// Use this for initialization
@@ -16,7 +17,46 @@ public class DialogueTrigger : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+	 talkingTo();
+	}
+
+	void talkingTo(){
+		if (canTalk && Input.GetKeyUp (KeyCode.Space)) {
+
+			if (gameObject.name == "Mother") {
+				DialogM.currNPC = "Mother";
+
+			}
+			if (gameObject.name == "Bag") {
+				DialogM.currNPC = "Bag";
+
+			}
+			if (gameObject.name == "Police") {
+				DialogM.currNPC = "Police";
+			}
+			if (gameObject.name == "Crayon") {
+				DialogM.currNPC = "Crayon";
+
+			}
+			if (gameObject.name == "Detective") {
+				DialogM.currNPC = "Detective";
+			}
+			if (gameObject.name == "Letter") {
+				DialogM.currNPC = "Letter";
+			}
+			if (gameObject.name == "Sister") {
+				DialogM.currNPC = "Sister";
+			}
+			if (gameObject.name == "Doge") {
+				DialogM.currNPC = "Doge";
+			}
+			if (gameObject.name == "Scarf")
+			{
+				DialogM.currNPC = "Scarf";
+			}
+
+
+		}
 	}
 
 	void OnTriggerEnter2D(Collider2D thing){
@@ -43,55 +83,19 @@ public class DialogueTrigger : MonoBehaviour {
 
             }
         }
+		if (thing.gameObject.name == "MC") {
+			canTalk = true;
+		} 
+
+
     }
 
-	void OnTriggerStay2D(Collider2D thing){
+	void OnTriggerExit2D(Collider2D thing)
+	{
+		if (thing.gameObject.name == "MC") {
+			canTalk = false;
+		} 
 
-	
-		if (thing.gameObject.name == "MC" && Input.GetKeyUp (KeyCode.Space)) {
-
-			if (gameObject.name == "Mother") {
-				DialogM.displayBox ();
-				DialogM.currNPC = "Mother";
-
-			}
-			if (gameObject.name == "Bag") {
-				DialogM.displayBox ();
-				DialogM.currNPC = "Bag";
-
-			}
-			if (gameObject.name == "Police") {
-				DialogM.displayBox ();
-				DialogM.currNPC = "Police";
-			}
-			if (gameObject.name == "Crayon") {
-				DialogM.displayBox ();
-				DialogM.currNPC = "Crayon";
-
-			}
-			if (gameObject.name == "Detective") {
-               
-				DialogM.displayBox ();
-				DialogM.currNPC = "Detective";
-			}
-			if (gameObject.name == "Letter") {
-				DialogM.displayBox ();
-				DialogM.currNPC = "Letter";
-			}
-			if (gameObject.name == "Sister") {
-				DialogM.displayBox ();
-				DialogM.currNPC = "Sister";
-			}
-			if (gameObject.name == "Doge") {
-				DialogM.displayBox ();
-				DialogM.currNPC = "Doge";
-			}
-            if (gameObject.name == "Scarf")
-            {
-                DialogM.displayBox();
-                DialogM.currNPC = "Scarf";
-            }
-
-        }
 	}
+		
 }

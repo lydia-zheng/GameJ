@@ -15,17 +15,16 @@ public class DialogueManager : MonoBehaviour
     public int numberLines;
     public int currentLine = 0;
     public string currNPC;
+	private DialogueTrigger DT;
    
     public bool updated = false;
-
-
 
     GameObject textObject;
 
     // Use this for initialization
     void Start()
     {
-
+		DT = FindObjectOfType<DialogueTrigger>();
     }
 
     // Update is called once per frame
@@ -34,19 +33,26 @@ public class DialogueManager : MonoBehaviour
 
         if (currNPC == "Mother")
         {
+			displayBox ();
             dName.text = "Mother";
             numberLines = 2;
             if (currentLine == 0)
             {
+				displayBox ();
                 dText.text = "I've lost everything.";
             }
             else if (currentLine == 1)
             {
+				
                 dText.text = "In just one day.";
-            }
+			}else if (currentLine == 2)
+			{
+				textEnd ();
+			}
         }
         else if (currNPC == "Bag")
         {
+			displayBox ();
             dName.text = "Old Bag";
             numberLines = 2;
             if (currentLine == 0)
@@ -57,10 +63,14 @@ public class DialogueManager : MonoBehaviour
             {
                 dText.text = "<i>The day she lost it, she was distraught.</i>";
 
-            }
+			}else if (currentLine == 2)
+			{
+				textEnd ();
+			}
         }
         else if (currNPC == "Police")
         {
+			displayBox ();
             dName.text = "Police";
             numberLines = 3;
             if (currentLine == 0)
@@ -74,10 +84,14 @@ public class DialogueManager : MonoBehaviour
             else if (currentLine == 2)
             {
                 dText.text = "You better not be up to anything...";
-            }
+			}else if (currentLine == 3)
+			{
+				textEnd ();
+			}
         }
         else if (currNPC == "Doge")
         {
+			displayBox ();
             dName.text = "Developers";
             numberLines = 2;
             if (currentLine == 0)
@@ -87,10 +101,14 @@ public class DialogueManager : MonoBehaviour
             else if (currentLine == 1)
             {
                 dText.text = "very suffer";
-            }
+			}else if (currentLine == 2)
+			{
+				textEnd ();
+			}
         }
         else if (currNPC == "Crayon")
         {
+			displayBox ();
             dName.text = "Red Crayon";
             numberLines = 3;
             if (currentLine == 0)
@@ -104,10 +122,14 @@ public class DialogueManager : MonoBehaviour
             else if (currentLine == 2)
             {
                 dText.text = "<i>We both loved red.</i>";
-            }
+			}else if (currentLine == 3)
+			{
+				textEnd ();
+			}
         }
         else if (currNPC == "Letter")
         {
+			displayBox ();
             dName.text = "Love Letter";
             numberLines = 2;
             if (currentLine == 0)
@@ -117,10 +139,14 @@ public class DialogueManager : MonoBehaviour
             else if (currentLine == 1)
             {
                 dText.text = "<i>These stopped coming a week before she died.</i>";
-            }
+			}else if (currentLine == 2)
+			{
+				textEnd ();
+			}
         }
         else if (currNPC == "Sister")
         {
+			displayBox ();
             dName.text = "Sister";
             numberLines = 3;
             if (currentLine == 0)
@@ -134,10 +160,14 @@ public class DialogueManager : MonoBehaviour
             else if (currentLine == 2)
             {
                 dText.text = "But I'll be seeing you soon. Let's talk lots then.";
-            }
+			}else if (currentLine == 3)
+			{
+				textEnd ();
+			}
         }
         else if (currNPC == "Detective")
         {
+			displayBox ();
             dName.text = "Detective";
             numberLines = 2;
             if (currentLine == 0)
@@ -147,11 +177,15 @@ public class DialogueManager : MonoBehaviour
             else if (currentLine == 1)
             {
                 dText.text = "there's nothing I can do to prove your innocence.";
-            }
+			}else if (currentLine == 2)
+			{
+				textEnd ();
+			}
         }
 
         else if (currNPC == "Scarf")
         {
+			displayBox ();
             dName.text = "Scarf";
             numberLines = 2;
             if (currentLine == 0)
@@ -161,12 +195,16 @@ public class DialogueManager : MonoBehaviour
             else if (currentLine == 1)
             {
                 dText.text = "<i>I never did.</i>";
-            }
+			}else if (currentLine == 2)
+			{
+				textEnd ();
+			}
 
         }
 
 		else if (currNPC == "FirstSceneDialogue")
 		{
+			displayBox ();
 			dName.text = "Me";
 			numberLines = 2;
 			if (currentLine == 0)
@@ -176,10 +214,15 @@ public class DialogueManager : MonoBehaviour
 			else if (currentLine == 1)
 			{
 				dText.text = "<i>...not that I care anymore.</i>";
+			}else if (currentLine == 2)
+			{
+				Destroy(DT);
+				textEnd ();
 			}
 		}
 		else if (currNPC == "DarkSceneDialogue")
 		{
+			displayBox ();
 			dName.text = "Me";
 			numberLines = 3;
 			if (currentLine == 0)
@@ -193,12 +236,16 @@ public class DialogueManager : MonoBehaviour
 			else if (currentLine == 2)
 			{
 				dText.text = "<i>Wait... </i>";
+			}else if (currentLine == 3)
+			{
+				Destroy(DT);
+				textEnd ();
 			}
 		}
 
         else if (currNPC == "LastSceneDialogue")
         {
-            
+			displayBox ();   
             numberLines = 6;
             if(currentLine == 0)
             {
@@ -257,11 +304,12 @@ public class DialogueManager : MonoBehaviour
             currentLine++;
         }
 
-        if (currentLine >= numberLines)
+		if (currentLine > numberLines) {
+			dialogActive = false;
+			currentLine = 0;
+		}
+		if (currentLine == numberLines)
         {
-            dBox.SetActive(false);
-            dialogActive = false;
-            currentLine = 0;
 
             if (currNPC == "Bag")
             {
@@ -309,7 +357,11 @@ public class DialogueManager : MonoBehaviour
         dialogActive = true;
         dBox.SetActive(true);
     }
-
+	public void textEnd()
+	{
+		dBox.SetActive(false);
+		currNPC = "null";
+	}
    
    
 }
