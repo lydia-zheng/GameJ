@@ -277,20 +277,12 @@ public class DialogueManager : MonoBehaviour
             {
                 Destroy(dBox);
                 Image image = FindObjectOfType<Image>();
-                if (!updated)
-                {
-                    updated = true;
-                    image.GetComponent<FadeFunction>();
-                    
-                }
-               
+				if (!updated) {
+					updated = true;
+					image.GetComponent<FadeFunction> ();
+				}
 
-
-           
             }
-            //fade out would be great here
-  
-
 
         }
        
