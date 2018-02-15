@@ -235,6 +235,26 @@ Prefab:
       propertyPath: levelName
       value: LastScene
       objectReference: {fileID: 0}
+    - target: {fileID: 61451073333119806, guid: f12da9ec309224548964e28f1e5106b0,
+        type: 2}
+      propertyPath: m_Offset.x
+      value: 0.043124422
+      objectReference: {fileID: 0}
+    - target: {fileID: 61451073333119806, guid: f12da9ec309224548964e28f1e5106b0,
+        type: 2}
+      propertyPath: m_Offset.y
+      value: -0.37237433
+      objectReference: {fileID: 0}
+    - target: {fileID: 61451073333119806, guid: f12da9ec309224548964e28f1e5106b0,
+        type: 2}
+      propertyPath: m_Size.x
+      value: 1.0862483
+      objectReference: {fileID: 0}
+    - target: {fileID: 61451073333119806, guid: f12da9ec309224548964e28f1e5106b0,
+        type: 2}
+      propertyPath: m_Size.y
+      value: 0.2552516
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f12da9ec309224548964e28f1e5106b0, type: 2}
   m_IsPrefabParent: 0
@@ -750,7 +770,7 @@ GameObject:
   - component: {fileID: 996260882}
   - component: {fileID: 996260881}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Music Switch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1530,12 +1550,12 @@ Prefab:
     - target: {fileID: 61756816841409300, guid: f8317772add971f45ba6341d18d4261f,
         type: 2}
       propertyPath: m_Offset.x
-      value: -8.234623
+      value: -7.234307
       objectReference: {fileID: 0}
     - target: {fileID: 61756816841409300, guid: f8317772add971f45ba6341d18d4261f,
         type: 2}
       propertyPath: m_Size.x
-      value: 34.761322
+      value: 36.761955
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f8317772add971f45ba6341d18d4261f, type: 2}

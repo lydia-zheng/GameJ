@@ -16,7 +16,8 @@ public class DialogueManager : MonoBehaviour
     public int currentLine = 0;
     public string currNPC;
 	private DialogueTrigger DT;
-   
+	public PlayerMovement PM;
+	private bool wasFlipped = false;
     public bool updated = false;
 
     GameObject textObject;
@@ -25,6 +26,7 @@ public class DialogueManager : MonoBehaviour
     void Start()
     {
 		DT = FindObjectOfType<DialogueTrigger>();
+		PM = FindObjectOfType<PlayerMovement>();
     }
 
     // Update is called once per frame
@@ -259,6 +261,10 @@ public class DialogueManager : MonoBehaviour
             }
             if (currentLine == 2)
             {
+				if (wasFlipped != true) {
+					PM.flipPlayer ();
+					wasFlipped = true;
+				}
                 dName.text = "Me";
                 dText.text = "......";
             }

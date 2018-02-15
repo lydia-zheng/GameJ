@@ -58,7 +58,7 @@ public class PlayerMovement : MonoBehaviour {
 	void Jump(){
 		gameObject.GetComponent<Rigidbody2D> ().AddForce (new Vector2 (0, jumpPower));
 	}
-	void flipPlayer(){
+	public void flipPlayer(){
 		facingRight = !facingRight;
 		transform.localScale = new Vector2 (transform.localScale.x * -1, transform.localScale.y);
 	}
