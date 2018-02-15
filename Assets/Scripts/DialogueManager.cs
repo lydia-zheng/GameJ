@@ -296,18 +296,20 @@ public class DialogueManager : MonoBehaviour
        
         
 
-
+		// if dialogue is active, increase line count
         if (dialogActive && Input.GetKeyDown(KeyCode.Space))
         {
-            //dBox.SetActive (false);
-            //dialogActive = false;
             currentLine++;
         }
 
+		// to make sure it keeps counting lines on the "empty" text box screen for NPCs
+		// before making it inactive and refreshing line count
 		if (currentLine > numberLines) {
 			dialogActive = false;
 			currentLine = 0;
 		}
+
+		// if you finish talking to item, it dies
 		if (currentLine == numberLines)
         {
 

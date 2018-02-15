@@ -11,13 +11,13 @@ public class ButtonManager : MonoBehaviour
         SceneManager.LoadScene(newGameLevel);
     }
 
-    public void LoadGameBtn()
-    {
-        //not implemented
-    }
-
     public void ExitGameBtn()
     {
         Application.Quit(); //still need to implement how to deal with this
     }
+
+	public void CreditBtn()
+	{
+		// show credits on click
+	}
 }
