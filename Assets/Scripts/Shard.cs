@@ -16,17 +16,11 @@ public class Shard : MonoBehaviour {
         
     }
 
-   /* void OnTriggerEnter2D(Collider2D col)
-    {
-
-    } */
-
     public void DestroyShard()
     {
-  
-            gm.shards += 1;
-            Destroy(gameObject);
-    Update();
+        gm.shards += 1;
+        Destroy(gameObject);
+    	Update();
     }
    
 
